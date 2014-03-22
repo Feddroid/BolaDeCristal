@@ -7,10 +7,12 @@ import android.hardware.SensorManager;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.boladecristal.ShakeDetector.OnShakeListener;
 // CTRL + SHIFT + O = actualiza lo imports 
@@ -41,7 +43,30 @@ public class MainActivity extends Activity {
 			public void onShake() {
 				manejarNuevaRespuesta();
 			}
-		});
+		});        
+        
+       /*String toastMessage = "Hola esta es la actividad";
+       Toast bienvenidoToast = Toast.makeText(this, toastMessage, Toast.LENGTH_LONG);
+        bienvenidoToast.show();*/
+        
+        //Toast.makeText(this, "Hola esta es la actividad2", Toast.LENGTH_LONG).show();
+        
+        Toast bienvenidoToast = Toast.makeText(this, "Aca arriba!!", Toast.LENGTH_LONG);
+        bienvenidoToast.setGravity(Gravity.TOP, 0, 0);
+        bienvenidoToast.show();
+    }
+    
+    @Override
+    public void onResume(){
+    	super.onResume();
+    	mSensorManager.registerListener(mShakeDetector, mAccelerometer, SensorManager.SENSOR_DELAY_UI);        
+    }
+        
+    
+    @Override
+    public void onPause(){
+    	super.onPause();
+    	mSensorManager.unregisterListener(mShakeDetector);
     }
 
     private void animarBolaDeCristal(){
