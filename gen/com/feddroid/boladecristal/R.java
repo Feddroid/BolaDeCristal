@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.example.boladecristal;
+package com.feddroid.boladecristal;
 
 public final class R {
     public static final class attr {

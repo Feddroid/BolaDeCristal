@@ -1,4 +1,4 @@
-package com.example.boladecristal;
+package com.feddroid.boladecristal;
 
 import java.util.Random;
 
@@ -8,12 +8,12 @@ public class BolaDeCristal {
 			"Es casi seguro",
 			"Es posible",
 			"Toda las señales dicen SI",
-			"Las estrellas no estan alineadas aun",
+			"Las estrellas no estan alineadas",
 			"No lo creo",
 			"Es muy poco probable",
 			"Mejor no te lo digo ahora",
 			"Concentrate y pregunta de nuevo",
-			"No puedo responderte ahora"};
+			"Ni lo pienses"};
 	
 	//Metodos (habilidades: cosas que el objeto puede hacer)
 	public String getUnaRespuesta(){

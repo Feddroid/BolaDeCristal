@@ -1,4 +1,4 @@
-package com.example.boladecristal;
+package com.feddroid.boladecristal;
 
 import android.app.Activity;
 import android.graphics.drawable.AnimationDrawable;
@@ -7,18 +7,19 @@ import android.hardware.SensorManager;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
-import android.view.Gravity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.boladecristal.ShakeDetector.OnShakeListener;
 // CTRL + SHIFT + O = actualiza lo imports 
+import com.feddroid.boladecristal.R;
+import com.feddroid.boladecristal.ShakeDetector.OnShakeListener;
 
 public class MainActivity extends Activity {
 	
+	public static final String TAG = MainActivity.class.getSimpleName();
 	private BolaDeCristal mBoladeCristal = new BolaDeCristal();
 	private TextView mRespuestaLabel;
 	private ImageView mBoladeCristalImagen;
@@ -51,9 +52,11 @@ public class MainActivity extends Activity {
         
         //Toast.makeText(this, "Hola esta es la actividad2", Toast.LENGTH_LONG).show();
         
-        Toast bienvenidoToast = Toast.makeText(this, "Aca arriba!!", Toast.LENGTH_LONG);
+        /*Toast bienvenidoToast = Toast.makeText(this, "Aca arriba!!", Toast.LENGTH_LONG);
         bienvenidoToast.setGravity(Gravity.TOP, 0, 0);
-        bienvenidoToast.show();
+        bienvenidoToast.show();*/
+        
+       // Log.d(TAG, "Estamos logeadoos desde el metodo onCreate()!");
     }
     
     @Override

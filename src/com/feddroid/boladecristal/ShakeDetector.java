@@ -1,4 +1,4 @@
-package com.example.boladecristal;
+package com.feddroid.boladecristal;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
